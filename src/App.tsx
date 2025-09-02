@@ -1,5 +1,4 @@
 import { useTasks } from "./hooks/useTasks";
-
 import TaskInput from './components/taskInput/TaskInput';
 import TaskList from './components/taskList/TaskList';
 import Footer from './components/footer/Footer';
