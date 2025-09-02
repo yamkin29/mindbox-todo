@@ -1,69 +1,91 @@
-# React + TypeScript + Vite
+# 📚 Mindbox Todo — пробное задание
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Пробный проект для стажёрской роли фронтенда в Mindbox. Это типичный «список дел»: быстрый, лаконичный и удобный для повседневного использования.
 
-Currently, two official plugins are available:
+## 🚧 Что умеет приложение
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✚ Создание новой записи
+- 🗒️ Отображение полного перечня задач
+- ☑️ Просмотр только завершённых (фильтр Completed)
+- 🕒 Просмотр только активных (фильтр Active)
+- 🔁 Смена состояния задачи (активна ↔ выполнена)
+- 🔟 Подсчёт оставшихся невыполненных пунктов
+- 🧽 Очистка выполненных элементов (кнопка скрывается, когда очищать нечего)
+- 💽 Автосохранение в `localStorage` с восстановлением после перезагрузки
 
-## Expanding the ESLint configuration
+## 🧩 Технологический набор
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🧠 React 19, TypeScript 5.8, Vite 7
+- 🧷 Хуки React (`useState`, `useEffect`)
+- 🖌️ Стили — обычный CSS по компонентам
+- 🧰 ESLint 9, строгие настройки TypeScript
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🔍 Про тесты
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Сейчас авто-тесты не подключены. При необходимости легко добавить покрытие ключевых сценариев с `@testing-library/react`:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Добавление записей
+- Переключение статуса
+- Фильтрация списка
+- Очистка завершённых
+
+## 🧭 Как запустить
+
+Необходимо: Node.js 18+ (желательно 20+) и npm 9+.
+
+Установка зависимостей:
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Запуск в режиме разработки:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+Сборка и локальный предпросмотр прод-версии:
+
+```bash
+npm run build
+npm run preview
+```
+
+Проверка линтером:
+
+```bash
+npm run lint
+```
+
+## ☁️ Публикация
+
+Подходит любой статический хостинг (например, Vercel/Netlify).
+
+- Vercel: импортируйте репозиторий, шаблон «Vite», build `npm run build`, output `dist`.
+- Для локальной проверки используйте `npm run preview`.
+
+Ссылка на размещённую версию: <укажите адрес деплоя>
+
+## 🗺️ Карта файлов
+
+- `src/App.tsx` — сборка основной страницы: ввод, список, футер.
+- `src/hooks/useTasks.ts` — управление состоянием задач, фильтры, очистка, синхронизация с `localStorage`.
+- `src/components/taskInput/TaskInput.tsx` — поле для добавления задач (иконка-стрелка несёт декоративную роль).
+- `src/components/taskList/TaskList.tsx` — рендер списка.
+- `src/components/taskItem/TaskItem.tsx` — элемент списка, переключение кликом, текст тоже активен.
+- `src/components/footer/Footer.tsx` — фильтры, счётчик, условное отображение «Clear completed».
+- `src/types/index.ts` — типы и интерфейсы пропсов.
+
+## 🏁 Результат
+
+Текущее решение соответствует требованиям задания:
+
+- 🔘 Поле для добавления новой задачи
+- 🔘 Фильтры: все / выполненные / активные
+- 🔘 Счётчик оставшихся пунктов
+- 🔘 Очистка выполненных элементов
+- 🔘 Используются React + TypeScript + Hooks
+- 🔘 Тесты можно добавить быстро при необходимости
+
+Благодарю за просмотр! 🙌
