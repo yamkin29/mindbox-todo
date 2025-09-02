@@ -4,23 +4,7 @@ import type {Task} from "../../types";
 const TaskItem = ({ task, onToggle }: { task: Task, onToggle: () => void }) => {
     return (
         <li className="task-item">
-            <svg
-                className="task-item-marker"
-                width="61"
-                height="61"
-                viewBox="0 0 61 61"
-                onClick={onToggle}
-                role="button"
-                tabIndex={0}
-                aria-pressed={task.isCompleted}
-                onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        onToggle();
-                    }
-                }}
-                aria-label={task.isCompleted ? 'Mark task as active' : 'Mark task as completed'}
-            >
+            <svg className="task-item-marker" width="61" height="61" viewBox="0 0 61 61" onClick={onToggle}>
                 <circle
                     cx="30.5"
                     cy="30.5"
@@ -41,10 +25,7 @@ const TaskItem = ({ task, onToggle }: { task: Task, onToggle: () => void }) => {
 
             </svg>
 
-            <span
-                className={task.isCompleted ? "completed-task" : "active-task"}
-                onClick={onToggle}
-            >
+            <span className={task.isCompleted ? "completed-task" : "active-task"}>
         {task.text}
       </span>
         </li>

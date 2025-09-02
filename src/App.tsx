@@ -7,7 +7,7 @@ import Footer from './components/footer/Footer';
 import './App.css';
 
 function App() {
-    const { filteredTasks, itemsLeft, filter, setFilter, addTask, toggleTask, clearCompleted, toggleAll, hasTasks, allCompleted } = useTasks();
+    const { filteredTasks, itemsLeft, filter, setFilter, addTask, toggleTask, clearCompleted } = useTasks();
 
     return (
         <div className='app-container'>
@@ -15,7 +15,7 @@ function App() {
                 <h1 className="app-title">todos</h1>
 
                 <div className="app-main">
-                    <TaskInput onAdd={addTask} onToggleAll={toggleAll} hasTasks={hasTasks} allCompleted={allCompleted} />
+                    <TaskInput onAdd={addTask} />
 
                     <TaskList tasks={filteredTasks} toggleTask={toggleTask} />
 

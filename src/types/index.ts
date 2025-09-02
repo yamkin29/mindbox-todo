@@ -6,9 +6,6 @@ export interface Task {
 
 export interface TaskInputProps {
   onAdd: (text: string) => void;
-  onToggleAll: () => void;
-  hasTasks: boolean;
-  allCompleted: boolean;
 }
 
 export interface FooterProps {

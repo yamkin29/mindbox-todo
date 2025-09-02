@@ -25,13 +25,6 @@ export function useTasks() {
     setTasks(tasks => tasks.filter(task => !task.isCompleted));
   };
 
-  const toggleAll = () => {
-    setTasks(tasks => {
-      const allCompleted = tasks.length > 0 && tasks.every(t => t.isCompleted);
-      return tasks.map(t => ({ ...t, isCompleted: !allCompleted }));
-    });
-  };
-
   const filteredTasks = tasks.filter(task => {
     switch (filter) {
       case "all":
@@ -44,8 +37,6 @@ export function useTasks() {
   });
 
   const itemsLeft = tasks.filter(task => !task.isCompleted).length;
-  const hasTasks = tasks.length > 0;
-  const allCompleted = hasTasks && itemsLeft === 0;
 
-  return { filteredTasks, itemsLeft, filter, setFilter, addTask, toggleTask, clearCompleted, toggleAll, hasTasks, allCompleted }
+  return { filteredTasks, itemsLeft, filter, setFilter, addTask, toggleTask, clearCompleted }
 }
