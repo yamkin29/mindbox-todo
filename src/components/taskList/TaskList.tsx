@@ -1,25 +1,13 @@
-import TaskItem from "../taskItem/TaskItem";
+import TaskItem from '../taskItem/TaskItem';
 
-import "./TaskList.css";
-import type { Task } from "../../types";
+import './TaskList.css';
+import type { Task } from '../../types';
 
-const TaskList = ({
-    tasks,
-    toggleTask,
-}: {
-    tasks: Task[];
-    toggleTask: (id: number) => void;
-}) => {
+const TaskList = ({ tasks, toggleTask }: { tasks: Task[]; toggleTask: (id: number) => void }) => {
     return (
         <ul className="task-list">
             {tasks.map((task) => {
-                return (
-                    <TaskItem
-                        key={`${task.text}-${task.id}`}
-                        task={task}
-                        onToggle={() => toggleTask(task.id)}
-                    ></TaskItem>
-                );
+                return <TaskItem key={`${task.text}-${task.id}`} task={task} onToggle={() => toggleTask(task.id)}></TaskItem>;
             })}
         </ul>
     );

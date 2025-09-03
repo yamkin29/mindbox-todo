@@ -13,7 +13,7 @@
 
 .footer::before,
 .footer::after {
-    content: "";
+    content: '';
     position: absolute;
     background-color: #f6f6f6;
     box-shadow:
@@ -52,14 +52,14 @@
 }
 
 .items-left-text {
-    font-family: "M_Ying_Hei_HK_W3";
+    font-family: 'M_Ying_Hei_HK_W3';
     font-size: 27px;
     letter-spacing: 0.5px;
     color: #777777;
 }
 
 .button {
-    font-family: "M_Ying_Hei_HK_W3";
+    font-family: 'M_Ying_Hei_HK_W3';
     background-color: transparent;
     border: none;
     font-size: 26px;

@@ -9,8 +9,8 @@ export interface TaskInputProps {
 }
 
 export interface FooterProps {
-    filter: "all" | "active" | "completed";
-    setFilter: (filter: "all" | "active" | "completed") => void;
+    filter: 'all' | 'active' | 'completed';
+    setFilter: (filter: 'all' | 'active' | 'completed') => void;
     itemsLeft: number;
     clearCompleted: () => void;
 }

@@ -1,20 +1,12 @@
-import { useTasks } from "./hooks/useTasks";
-import TaskInput from "./components/taskInput/TaskInput";
-import TaskList from "./components/taskList/TaskList";
-import Footer from "./components/footer/Footer";
+import { useTasks } from './hooks/useTasks';
+import TaskInput from './components/taskInput/TaskInput';
+import TaskList from './components/taskList/TaskList';
+import Footer from './components/footer/Footer';
 
-import "./App.css";
+import './App.css';
 
 function App() {
-    const {
-        filteredTasks,
-        itemsLeft,
-        filter,
-        setFilter,
-        addTask,
-        toggleTask,
-        clearCompleted,
-    } = useTasks();
+    const { filteredTasks, itemsLeft, filter, setFilter, addTask, toggleTask, clearCompleted } = useTasks();
 
     return (
         <div className="app-container">
@@ -26,12 +18,7 @@ function App() {
 
                     <TaskList tasks={filteredTasks} toggleTask={toggleTask} />
 
-                    <Footer
-                        filter={filter}
-                        setFilter={setFilter}
-                        itemsLeft={itemsLeft}
-                        clearCompleted={clearCompleted}
-                    />
+                    <Footer filter={filter} setFilter={setFilter} itemsLeft={itemsLeft} clearCompleted={clearCompleted} />
                 </div>
             </div>
         </div>

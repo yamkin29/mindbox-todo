@@ -12,7 +12,7 @@
 }
 
 .app-title {
-    font-family: "Helvetica Now Display";
+    font-family: 'Helvetica Now Display';
     font-weight: 100;
     font-size: 200px;
     line-height: 100%;
@@ -30,7 +30,7 @@
 }
 
 .app-main::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0;
     left: 0;

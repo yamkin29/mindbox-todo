@@ -1,29 +1,20 @@
-import { useState } from "react";
-import type { Task } from "../types";
+import { useState } from 'react';
+import type { Task } from '../types';
 
 export function useTasks() {
     const [tasks, setTasks] = useState<Task[]>([]);
-    const [filter, setFilter] = useState<"all" | "active" | "completed">("all");
+    const [filter, setFilter] = useState<'all' | 'active' | 'completed'>('all');
     const [nextTaskId, setNextTaskId] = useState(0);
 
     const addTask = (text: string) => {
         const value = text.trim();
         if (!value) return;
-        setTasks((tasks) => [
-            ...tasks,
-            { id: nextTaskId, text: value, isCompleted: false },
-        ]);
+        setTasks((tasks) => [...tasks, { id: nextTaskId, text: value, isCompleted: false }]);
         setNextTaskId((id) => id + 1);
     };
 
     const toggleTask = (id: number) => {
-        setTasks((tasks) =>
-            tasks.map((task) =>
-                task.id === id
-                    ? { ...task, isCompleted: !task.isCompleted }
-                    : task,
-            ),
-        );
+        setTasks((tasks) => tasks.map((task) => (task.id === id ? { ...task, isCompleted: !task.isCompleted } : task)));
     };
 
     const clearCompleted = () => {
@@ -32,11 +23,11 @@ export function useTasks() {
 
     const filteredTasks = tasks.filter((task) => {
         switch (filter) {
-            case "all":
+            case 'all':
                 return true;
-            case "active":
+            case 'active':
                 return !task.isCompleted;
-            case "completed":
+            case 'completed':
                 return task.isCompleted;
         }
     });
