@@ -58,4 +58,4 @@ npm run preview
 
 ## Деплой
 
-Любой статический хостинг (Vercel/Netlify и т. п.). Для Vercel: build `npm run build`, output `dist`. Для локальной проверки сборки — `npm run preview`.
+Приложение развернуто: https://mindbox-todo-gray.vercel.app/
