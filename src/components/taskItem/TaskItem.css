@@ -1,32 +1,31 @@
 .task-item {
-  display: flex;
-  align-items: center;
-  color: #4d4d4d;
-  font-family: "M_Ying_Hei_HK_W3";
-  letter-spacing: -1px;
-  font-size: 50px;
-  padding: 23.5px 15px;
-  background-color: #fefefe;
-  border-bottom: 2px solid #e6e6e6;
-  user-select: none;
-
+    display: flex;
+    align-items: center;
+    color: #4d4d4d;
+    font-family: "M_Ying_Hei_HK_W3";
+    letter-spacing: -1px;
+    font-size: 50px;
+    padding: 23.5px 15px;
+    background-color: #fefefe;
+    border-bottom: 2px solid #e6e6e6;
+    user-select: none;
 }
 
 .task-item-marker {
-  margin-right: 44px;
-  min-width: 61px;
-  background-color: white;
+    margin-right: 44px;
+    min-width: 61px;
+    background-color: white;
 }
 
 .completed-task {
-  color: #d9d9d9;
-  text-decoration-line: underline;
-  text-decoration-thickness: 3px;
-  text-underline-offset: -40%;
-  text-decoration-skip-ink: none;
+    color: #d9d9d9;
+    text-decoration-line: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: -40%;
+    text-decoration-skip-ink: none;
 }
 
 .task-item .active-task,
 .task-item .completed-task {
-  cursor: pointer;
+    cursor: pointer;
 }

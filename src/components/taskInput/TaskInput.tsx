@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import "./TaskInput.css";
-import type {TaskInputProps} from "../../types";
+import type { TaskInputProps } from "../../types";
 import * as React from "react";
 
 const TaskInput = ({ onAdd }: TaskInputProps) => {
@@ -11,18 +11,23 @@ const TaskInput = ({ onAdd }: TaskInputProps) => {
         event.preventDefault();
         onAdd(inputValue);
         setInputValue("");
-    }
+    };
 
     return (
-    <form className="input-form-wrapper" onSubmit={handleSubmit}>
-      <svg className="dropdown-arrow" width="61" height="61" viewBox="0 0 61 61">
-        <path
-          d="M16 27 L30.5 38 L47 27"
-          stroke="#e6e6e6"
-          strokeWidth="7"
-          fill="none"
-        />
-      </svg>
+        <form className="input-form-wrapper" onSubmit={handleSubmit}>
+            <svg
+                className="dropdown-arrow"
+                width="61"
+                height="61"
+                viewBox="0 0 61 61"
+            >
+                <path
+                    d="M16 27 L30.5 38 L47 27"
+                    stroke="#e6e6e6"
+                    strokeWidth="7"
+                    fill="none"
+                />
+            </svg>
 
             <input
                 type="text"
@@ -34,6 +39,6 @@ const TaskInput = ({ onAdd }: TaskInputProps) => {
             />
         </form>
     );
-}
+};
 
 export default TaskInput;
