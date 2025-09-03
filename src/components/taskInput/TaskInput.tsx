@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import './TaskInput.css';
-import type { TaskInputProps } from '../../types';
+import type { TaskInputProps } from '../../types/types.ts';
 import * as React from 'react';
 
 const TaskInput = ({ onAdd }: TaskInputProps) => {

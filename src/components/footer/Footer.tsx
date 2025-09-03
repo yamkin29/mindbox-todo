@@ -1,5 +1,5 @@
 import './Footer.css';
-import type { FooterProps } from '../../types';
+import type { FooterProps } from '../../types/types.ts';
 
 const Footer = ({ filter, setFilter, itemsLeft, clearCompleted }: FooterProps) => {
     return (

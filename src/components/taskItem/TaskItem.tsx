@@ -1,5 +1,5 @@
 import './TaskItem.css';
-import type { Task } from '../../types';
+import type { Task } from '../../types/types.ts';
 
 const TaskItem = ({ task, onToggle }: { task: Task; onToggle: () => void }) => {
     return (

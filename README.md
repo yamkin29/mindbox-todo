@@ -46,7 +46,7 @@ npm run preview
 - build: типизация + сборка
 - preview: локальный предпросмотр сборки
 - test / test:watch / test:ci: тесты Vitest (jsdom, jest‑dom матчеры)
-- lint / lint:fix: проверка ESLint (+ форматирование Prettier как ошибка)
+- lint / lint:fix: проверка ESLint
 
 ## Тестирование
 

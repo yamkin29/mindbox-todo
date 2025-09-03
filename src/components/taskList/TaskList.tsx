@@ -1,7 +1,7 @@
 import TaskItem from '../taskItem/TaskItem';
 
 import './TaskList.css';
-import type { Task } from '../../types';
+import type { Task } from '../../types/types.ts';
 
 const TaskList = ({ tasks, toggleTask }: { tasks: Task[]; toggleTask: (id: number) => void }) => {
     return (
