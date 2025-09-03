@@ -11,9 +11,7 @@
         "preview": "vite preview",
         "test": "vitest",
         "test:watch": "vitest --watch",
-        "test:ci": "vitest run",
-        "format": "prettier . --check",
-        "format:write": "prettier . --write"
+        "test:ci": "vitest run"
     },
     "dependencies": {
         "@testing-library/react": "^16.3.0",
